@@ -2,6 +2,7 @@ import os
 print("Current working directory:", os.getcwd())
 print("Files in current directory:", os.listdir())
 print("Files in 'model/' directory:", os.listdir("model"))
+
 import gradio as gr
 import joblib
 import re
@@ -35,5 +36,5 @@ iface = gr.Interface(
     description="Paste a movie review to predict its sentiment (Positive or Negative). Model trained on IMDB dataset."
 )
 
-if __name__ == "__main__":
-    iface.launch()
+iface.launch()
+
